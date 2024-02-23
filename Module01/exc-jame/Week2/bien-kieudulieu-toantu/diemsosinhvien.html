@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Điểm sinh viên</title>
+  </head>
+  <body>
+    <h1>ĐIỂM SINH VIÊN</h1>
+    <form>
+      <label for="vat_ly">Điểm Vật Lý:</label>
+      <input type="number" id="vat_ly" name="vat_ly" /><br /><br />
+      <label for="hoa_hoc">Điểm Hóa Học:</label>
+      <input type="number" id="hoa_hoc" name="hoa_hoc" /><br /><br />
+      <label for="sinh_hoc">Điểm Sinh Học:</label>
+      <input type="number" id="sinh_hoc" name="sinh_hoc" /><br /><br />
+      <input type="button" value="Tính điểm" onclick="tinh_diem()">
+    </form>
+    <br>
+    <div id="ket_qua"></div>
+  </body>
+<script src="diemsinhvien.js"></script>
+</html>

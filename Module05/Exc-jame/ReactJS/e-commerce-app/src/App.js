@@ -1,0 +1,21 @@
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './App.css';
+import { Home } from './components/Home';
+import { Navbar } from './components/Navbar';
+
+  function App() {
+    return (
+      
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/products" component={Products} />
+          </Routes>
+        </BrowserRouter>
+    
+    );
+  }
+
+export default App;

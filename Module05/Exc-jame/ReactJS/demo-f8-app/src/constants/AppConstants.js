@@ -1,0 +1,1 @@
+export const JOBS_API_PREFIX="https://657aad341acd268f9afb8961.mockapi.io/api/";

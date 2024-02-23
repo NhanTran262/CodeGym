@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pass by value, pass by reference</title>
+  </head>
+  <body>
+    <script>
+      //Pass by value
+      var a = 3;
+      var b = a;
+      console.log("a1: " + a); //3
+      console.log("b1: " + b); //3
+
+      a = 4;
+      console.log("a2" + a); //4
+      console.log("b2" + a); //3
+
+      //Pass by reference
+      var objA = {id:1, name:"Ty"}
+      var objB = objA;
+      console.log(objA);//{id:1,name:"Ty"}
+      console.log(objB);//{id:1,name:"Ty"}
+      objA.name = "Teo";
+      console.log(objA);//{id:1,name:"Teo"}
+      console.log(objB);//{id:1,name:"Teo"}
+    </script>
+  </body>
+</html>

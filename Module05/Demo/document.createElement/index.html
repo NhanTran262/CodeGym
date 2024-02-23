@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <!-- 
+1. document.createElement()
+2. document.body.appendChild()
+3. console.dir()
+4. innerText, id, className, style 
+-->
+    <div id="root"></div>
+    <!-- <script>
+        // DOM
+        // const root = document.getElementById('root')
+        // const h1 = document.createElement('h1')
+        // h1.innerText = 'Hello guys!'
+        // h1.id='heading'
+        // h1.className='test class-2'
+        // Object.assign(h1.style,{
+        //     color: 'blue',
+        //     backgroundColor:'#333'
+        // })
+        // console.log(h1);
+        // root.appendChild(h1)
+
+        // // React
+        // const h1React= React.createElement('h1', {
+        //     title: 'Hello',
+        //     className: 'heading'
+        // }, 'Hello guys')
+        // console.log(h1React);
+
+        // Element lồng element
+        // DOM
+        // const ulDOM = document.createElement('ul')
+        // ulDOM.id = 'ul-id'
+        // ulDOM.style = 'color:red; font-size:30px'
+        // const liDOM1 = document.createElement('li')
+        // liDOM1.innerText = 'JavaScript'
+        // liDOM1.id = 'li-1'
+        // const liDOM2 = document.createElement('li')
+        // liDOM2.innerText = 'ReactJS'
+        // ulDOM.appendChild(liDOM1)
+        // ulDOM.appendChild(liDOM2)
+        // document.body.appendChild(ulDOM)
+
+        //React
+        const ulReact = React.createElement(
+            'ul',
+            {
+                id: 'ul-id',
+                style: 'color:red; font-size:30px'
+            },
+            React.createElement('li', { id: 'li-1' }, 'JavaScript'),
+            React.createElement('li', null, 'ReactJS')
+        )
+        console.log(ulReact);
+        // Tạo:
+        // <div class="post-item">
+        //     <h2 title="Học React tại F8">Học ReactJS</h2>
+        //     <p>Học React từ cơ bản đến nâng cao</p>
+        // </div>
+
+        //DOM
+        // const divDOM = document.createElement('div')
+        // divDOM.className = 'post-item'
+        // const h2DOM = document.createElement('h2')
+        // h2DOM.title = 'Học React tại F8'
+        // h2DOM.id = 'h2-id'
+        // h2DOM.style = 'color:blue;font-size 50px'
+        // h2DOM.innerText = 'Học ReactJS'
+        // const pDOM = document.createElement('p')
+        // pDOM.innerText = 'Học React từ cơ bản đến nâng cao'
+        // divDOM.appendChild(h2DOM)
+        // divDOM.appendChild(pDOM)
+        // document.body.appendChild(divDOM)
+        //React
+        const divReact = React.createElement(
+            'div',
+            { className: 'post-item' },
+            React.createElement(
+                'h2',
+                {
+                    title: 'Học ReactJS tại F8',
+                },
+                'Học ReactJS'),
+            React.createElement('p', null, 'Học ReactJS từ cơ bản đến nâng cao'),
+        )
+        console.log(divReact);
+
+        //Get root element
+        const container =document.getElementById('root')
+        const root=ReactDOM.createRoot(container)
+
+        //React-DOM -> render UI
+        root.render(divReact)
+    </script> -->
+    
+ <!-- React render Array -->
+    <script type="text/babel">
+        const courses = [
+            { name: 'HTML, CSS'},
+            { name: 'Responesive web design'},
+            { name: 'ReactJS'}
+        ]
+        const jsx = (
+            <ul>
+                {courses.map((course, index) =>
+                    <li key= {index}>{course.name}</li>
+                )}
+            </ul>
+        )
+        console.log(jsx);
+        const container = document.getElementById('root')
+        const root = ReactDOM.createRoot(container)
+        root.render(jsx)
+    </script>
+</body>
+
+</html>

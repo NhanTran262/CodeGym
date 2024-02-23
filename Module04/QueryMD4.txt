@@ -1,0 +1,154 @@
+create database winz_banking04;
+use winz_banking04;
+-- drop database winz_banking04;
+
+-- Bảng "Vai trò"
+create table role (
+    role_id int primary key, -- Mã vai trò
+    role_name varchar(50) -- Tên vai trò
+);
+
+-- Bảng "Phân quyền tài khoản"
+create table account_role (
+    account_role_id int primary key, -- Mã phân quyền tài khoản
+    role_id int, -- Mã vai trò
+    foreign key (role_id) references role(role_id) -- Liên kết với bảng "Vai trò"
+);
+
+-- Bảng "Tài khoản"
+create table account (
+    account_id int primary key, -- Mã tài khoản
+    username varchar(100), -- Tên đăng nhập
+    password varchar(100), -- Mật khẩu
+    account_role_id int, -- Mã phân quyền tài khoản
+    foreign key (account_role_id) references account_role(account_role_id) -- Liên kết với bảng "Phân quyền tài khoản"
+);
+
+-- Bảng "Khách hàng"
+create table customers (
+    customer_id int primary key, -- Mã khách hàng
+    first_name varchar(50), -- Tên
+    last_name varchar(50), -- Họ
+    dob date, -- Ngày sinh
+    email varchar(100), -- Email
+    phone_number varchar(20), -- Số điện thoại
+    account_id int, -- Mã tài khoản
+    foreign key (account_id) references account(account_id) -- Liên kết với bảng "Tài khoản"
+);
+
+-- Bảng "Nhân viên"
+create table employees (
+    employee_id int primary key, -- Mã nhân viên
+    first_name varchar(50), -- Tên
+    last_name varchar(50), -- Họ
+    position varchar(50), -- Chức vụ
+    account_id int, -- Mã tài khoản
+    foreign key (account_id) references account(account_id) -- Liên kết với bảng "Tài khoản"
+);
+
+
+-- Bảng "Hợp đồng"
+create table contracts (
+    contract_id int primary key, -- Mã hợp đồng
+    contract_number varchar(20) not null, -- Số hợp đồng
+    contract_type varchar(50) not null, -- Loại hợp đồng
+    start_date date, -- Ngày bắt đầu
+    end_date date, -- Ngày kết thúc
+    customer_id int, -- Mã khách hàng
+    employee_id int, -- Mã nhân viên
+    foreign key (customer_id) references customers(customer_id), -- Liên kết với bảng "Khách hàng"
+    foreign key (employee_id) references employees(employee_id) -- Liên kết với bảng "Nhân viên"
+);
+-- Bảng "Chi tiết hợp đồng"
+create table contract_details (
+    detail_id int primary key, -- Mã chi tiết hợp đồng
+    detail_description text, -- Mô tả chi tiết
+    additional_terms text, -- Các điều khoản bổ sung
+	contract_id int, -- Mã hợp đồng
+    foreign key (contract_id) references contracts(contract_id) -- Liên kết với bảng "Hợp đồng"
+);
+
+-- Bảng "Giao dịch"
+create table transactions (
+    transaction_id int primary key, -- Mã giao dịch
+    transaction_type varchar(50), -- Loại giao dịch
+    amount decimal(10, 2), -- Số tiền
+    timestamp timestamp, -- Thời gian giao dịch
+	contract_id int, -- Mã hợp đồng
+    foreign key (contract_id) references contracts(contract_id) -- Liên kết với bảng "Hợp đồng"
+);
+
+-- Bảng "Chi tiết giao dịch"
+create table transaction_details (
+    detail_id int primary key, -- Mã chi tiết giao dịch
+    transaction_id int, -- Mã giao dịch
+    description text, -- Mô tả giao dịch
+    foreign key (transaction_id) references transactions(transaction_id) -- Liên kết với bảng "Giao dịch"
+);
+
+-- Bảng "Kỳ hạn"
+create table terms (
+    term_id int primary key, -- Mã kỳ hạn
+    term_name varchar(50), -- Tên kỳ hạn
+    interest_rate decimal(5, 2), -- Lãi suất
+    contract_id int, -- Mã hợp đồng
+    foreign key (contract_id) references contracts(contract_id) -- Liên kết với bảng "Hợp đồng"
+);
+
+-- Bảng "Loại giao dịch"
+create table transaction_types (
+    type_id int primary key, -- Mã loại giao dịch
+    type_code varchar(10) not null, -- Mã loại giao dịch
+    type_name varchar(50) not null, -- Tên loại giao dịch
+    transaction_id int, -- Mã giao dịch
+    foreign key (transaction_id) references transactions(transaction_id) -- Liên kết với bảng "Giao dịch"
+);
+
+-- Bảng "Phí dịch vụ"
+create table service_fees (
+    fee_id int primary key, -- Mã phí dịch vụ
+    type_id int, -- Mã loại giao dịch
+    transfer_method varchar(50), -- Hình thức chuyển
+    fee decimal(10, 2), -- Phí dịch vụ
+    foreign key (type_id) references transaction_types(type_id) -- Liên kết với bảng "Loại giao dịch"
+);
+
+-- Bảng "Chi nhánh"
+create table branches (
+    branch_id int primary key, -- Mã chi nhánh
+    branch_name varchar(100) not null, -- Tên chi nhánh
+    branch_location varchar(100), -- Địa điểm chi nhánh
+    branch_code varchar(10), -- Mã chi nhánh
+   contract_id int, -- Mã hợp đồng
+    foreign key (contract_id) references contracts(contract_id) -- Liên kết với bảng "Hợp đồng"
+);
+
+-- Bảng "Khoản vay"
+create table loans (
+    loan_id int primary key, -- Mã khoản vay
+    loan_amount decimal(10, 2), -- Số tiền khoản vay
+    interest_rate decimal(5, 2), -- Lãi suất
+    start_date date, -- Ngày bắt đầu
+    end_date date, -- Ngày kết thúc
+    contract_id int, -- Mã hợp đồng
+    foreign key (contract_id) references contracts(contract_id) -- Liên kết với bảng "Hợp đồng"
+);
+
+-- Bảng "Thanh toán khoản vay"
+create table loan_payments (
+    payment_id int primary key, -- Mã thanh toán khoản vay
+    loan_id int, -- Mã khoản vay
+    payment_amount decimal(10, 2), -- Số tiền thanh toán
+    payment_date date, -- Ngày thanh toán
+    foreign key (loan_id) references loans(loan_id) -- Liên kết với bảng "Khoản vay"
+);
+
+-- Bảng "Thông báo ngân hàng"
+create table bank_notifications (
+    notification_id int primary key, -- Mã thông báo ngân hàng
+    notification_type varchar(50), -- Loại thông báo
+    message text, -- Nội dung thông báo
+    sent_date timestamp, -- Ngày gửi
+    contract_id int, -- Mã hợp đồng
+    foreign key (contract_id) references contracts(contract_id) -- Liên kết với bảng "Hợp đồng"
+);

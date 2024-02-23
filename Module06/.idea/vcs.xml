@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/case-study-m6/best-ticket-db" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/case-study-m6/best-ticket-front" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/case-study-m6/best-ticket-service" vcs="Git" />
+  </component>
+</project>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        let number = parseInt(prompt("Số cần check"));
+        isPrime(number)
+                  function isPrime(number) {
+                    let count = 0; // đếm số ước của số đang check
+                    let isPrime = false;
+                    if (number = 0) {
+                        alert(number + "Không phải số nguyên tố")
+                    } else {
+                        for ( let i=1; i <= number; i++) {
+                            if(number % 1 == 0) {
+                                count += 1;
+                            }
+                        }
+                        if (count == 2) {
+                            isPrime = true
+                        }
+                        if (isPrime) {
+                            alert(number + "Là số nguyên tố")
+                        }else{
+                            alert(number + "Không phải số nguyên tố")
+                        }
+                    }
+                }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+export const DEL_ITEM = "DEL_ITEM";
