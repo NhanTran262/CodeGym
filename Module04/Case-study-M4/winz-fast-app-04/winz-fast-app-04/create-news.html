@@ -1,0 +1,782 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Contact Us || WinzFast Child Care & Shop HTML5 Template</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/icon.png">
+	<!-- Google font (font-family: 'Lobster', Open+Sans;) -->
+	<link href="https://fonts.googleapis.com/css?family=Lobster+Two:400,400i,700,700i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800"
+		  rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+		  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+		  crossorigin="anonymous" referrerpolicy="no-referrer"/>
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/plugins.css">
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Cusom css -->
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- Modernizer js -->
+	<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+	<style>
+		.fileinput-cancel-button {
+			display: none;
+		}
+
+		.file-upload-contain {
+			position: relative;
+			margin-bottom: 40px;
+		}
+
+		.file-upload-contain .file-input,
+		.file-upload-contain .file-preview {
+			position: initial;
+		}
+
+		.file-upload-contain .file-drop-zone {
+			border: 2px dashed #1e80e8;
+			transition: 0.3s;
+			margin: 0;
+			padding: 0;
+			border-radius: 20px;
+			background-color: #f1f8fe;
+			min-height: auto;
+		}
+
+		.file-upload-contain .file-drop-zone.clickable:hover,
+		.file-upload-contain .file-drop-zone.clickable:focus,
+		.file-upload-contain .file-highlighted {
+			border: 2px dashed #1e80e8 !important;
+			background-color: #dfedfc;
+		}
+
+		.upload-area i {
+			color: #1e80e8;
+			font-size: 50px;
+		}
+
+		.upload-area p {
+			margin-bottom: 30px;
+			margin-top: 30px;
+			font-size: 20px;
+			font-weight: 600;
+			color: #2580e8;
+		}
+
+		.upload-area p b {
+			color: #1e80e8;
+		}
+
+		.upload-area button {
+			padding: 8px 16px;
+			min-width: 150px;
+			font-size: 16px;
+			font-weight: 600;
+			color: #fff;
+			background-color: #1e80e8;
+			border: 2px solid #1e80e8;
+			border-radius: 50px;
+			transition: 0.3s;
+		}
+
+		.upload-area button:hover {
+			background-color: #1e80e8;
+			box-shadow: 0px 4px 8px rgb(37 128 232 / 48%);
+		}
+
+		.file-preview {
+			padding: 0;
+			border: none;
+			margin-bottom: 30px;
+		}
+
+		.file-preview .fileinput-remove {
+			display: none;
+		}
+
+		.file-drop-zone-title {
+			padding: 55px 10px;
+		}
+
+		.file-drop-zone .file-preview-thumbnails {
+			cursor: pointer;
+		}
+
+		.file-preview-frame {
+			cursor: default;
+			display: flex;
+			align-items: center;
+			border: none;
+			background-color: #2580e8;
+			box-shadow: none;
+			border-radius: 8px;
+			width: 100%;
+			padding: 15px;
+			margin: 8px 0px;
+		}
+
+		.file-preview-frame:not(.file-preview-error):hover {
+			border: none;
+			box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
+		}
+
+		.file-preview-frame .kv-file-content {
+			min-width: 45px;
+			min-height: 45px;
+			width: 45px;
+			height: 45px;
+			border-radius: 4px;
+			margin-right: 10px;
+			background-color: #fff;
+			padding: 3px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.file-preview-image {
+			border-radius: 4px;
+		}
+
+		.file-preview-frame .file-footer-caption {
+			padding-top: 0;
+		}
+
+		.file-preview-frame .file-footer-caption {
+			text-align: left;
+			margin-bottom: 0;
+		}
+
+		.file-detail {
+			font-size: 14px;
+			height: auto;
+			width: 100%;
+			line-height: initial;
+		}
+
+		.file-detail .file-caption-name {
+			color: #fff;
+			font-size: 15px;
+			font-weight: 600;
+			margin-bottom: 6px;
+		}
+
+		.file-detail .file-size {
+			color: #f1f8fe;
+			font-size: 12px;
+		}
+
+		.kv-zoom-cache {
+			display: none;
+		}
+
+		.file-preview-frame .file-thumbnail-footer {
+			height: auto;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+		}
+
+		.file-preview-frame .file-drag-handle,
+		.file-preview-frame .file-upload-indicator {
+			float: none;
+		}
+
+		.file-preview-frame .file-footer-buttons {
+			float: none;
+			display: flex;
+			align-items: center;
+		}
+
+		.file-preview-status.text-center {
+			display: none;
+		}
+
+		.kv-file-remove.file-remove {
+			border: none;
+			background-color: #ef2f2f;
+			color: #fff;
+			width: 25px;
+			height: 25px;
+			font-size: 12px;
+			border-radius: 4px;
+			margin: 0px 4px;
+		}
+
+		.file-drag-handle.file-drag {
+			border: none;
+			background-color: #fff;
+			color: #2580e8;
+			width: 25px;
+			height: 25px;
+			font-size: 12px;
+			border-radius: 4px;
+			margin: 0px 4px;
+		}
+
+		.kv-file-upload.file-upload {
+			border: none;
+			background-color: #48bd22;
+			color: #fff;
+			width: 25px;
+			height: 25px;
+			font-size: 12px;
+			border-radius: 4px;
+			margin: 0px 4px;
+		}
+
+		.file-thumb-loading {
+			background: none !important;
+		}
+
+		.file-preview-frame.sortable-chosen {
+			background-color: #64a5ef;
+			border-color: #64a5ef;
+			box-shadow: none !important;
+		}
+	</style>
+</head>
+
+<body>
+
+<div class="wrapper" id="wrapper">
+
+	<!-- Header -->
+	<header id="header" class="jnr__header header--2 clearfix">
+		<!-- Start Header Top Area -->
+		<div class="junior__header__top bg-image--5">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-lg-6 col-sm-9 col-12">
+						<div class="jun__header__top__left">
+							<ul
+									class="top__address d-flex justify-content-start align-items-center flex-wrap flex-lg-nowrap flex-md-nowrap">
+								<li><i class="fa fa-envelope"></i><a href="#">winzfast@mail.com</a></li>
+								<li><i class="fa fa-phone"></i><span>Contact Now :</span><a href="#">+09999999</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-4 col-lg-6 col-sm-3 col-12">
+						<div class="jun__header__top__right">
+							<ul class="user-btn d-flex justify-content-lg-end justify-content-md-end justify-content-start align-items-center">
+								<li><img src="images/bg-png/avatar.png" alt="" width="32"
+										 height="32"><span id="username"></span><img src="images/bg-png/down.png"
+																					 alt=""></li>
+								<div class="user-dropdown">
+									<ul class="user-dropdown-name">
+										<li id="email"></li>
+									</ul>
+									<ul class="user-dropdown-list">
+										<li class="list-items"><a href="#">Edit information <i
+												class="fa-solid fa-pen-to-square"></i></a></li>
+										<li class="list-items"><a href="news-manage.html">News management <i
+												class="fa-solid fa-car"></i></a></li>
+										<li class="list-items"><a href="#">Transaction history <i
+												class="fa-solid fa-clock-rotate-left"></i></a></li>
+										<li class="list-items"><a href="#">logout <i
+												class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
+									</ul>
+								</div>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Header Top Area -->
+		<!-- Start Mainmenu Area -->
+		<div class="mainmenu__wrapper bg--white sticky__header">
+			<div class="container">
+				<div class="row d-none d-lg-flex">
+					<div class="col-sm-4 col-md-6 col-lg-2 order-1 order-lg-1">
+						<div class="logo">
+							<a href="index.html">
+								<h2 style="color: #000000">Winz Fast</h2>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-4 col-md-2 col-lg-9 order-3 order-lg-2">
+						<div class="mainmenu__wrap">
+							<nav class="mainmenu__nav">
+								<ul class="mainmenu">
+									<li class="drop"><a href="index.html">Home</a></li>
+									<li class="drop"><a href="product.html">Product</a></li>
+									<li class="drop"><a href="blog-details.html">Blog</a></li>
+									<li class="drop"><a href="about-us.html">About us</a></li>
+									<li><a href="contact.html">Contact</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="col-lg-1 col-sm-4 col-md-4 order-2 order-lg-3">
+						<div class="shopbox d-flex justify-content-end align-items-center">
+							<a class="minicart-trigger" href="#">
+								<i class="fa fa-bell-o"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- Mobile Menu -->
+				<div class="mobile-menu d-block d-lg-none">
+					<div class="logo">
+						<a href="index.html"><img src="images/logo/2.png" alt="logo"></a>
+					</div>
+					<a class="minicart-trigger" href="#">
+						<i class="fa fa-bell-o"></i>
+					</a>
+				</div>
+				<!-- Mobile Menu -->
+			</div>
+		</div>
+		<!-- End Mainmenu Area -->
+	</header>
+	<!-- //Header -->
+	<main class="main">
+		<div class="container pt-4">
+			<section class="section-top-first row">
+				<form class="col-lg-8 needs-validation" novalidate id="createNewsForm">
+					<div class="">
+						<h3>Thông tin phương tiện:</h3><br>
+						<div class="col-lg-4" id="thumbnailFile">
+							<div class="bg-diffrent">
+								<div class="container">
+									<div class="row justify-content-center">
+										<div class="text-center" style="max-width: 100%">
+											<div class="file-upload-contain">
+												<input id="multiplefileupload" type="file" accept=".jpg,.gif,.png" multiple
+													   style="display: none;"/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-row pt-4">
+							<!--							<div class="form-group col-md-6" >-->
+							<!--								<label for="user">Người đăng<span>*</span></label>-->
+							<!--								<select id="user" class="form-control is-invalid" required>-->
+							<!--									<option selected disabled value=""></option>-->
+							<!--								</select>-->
+							<!--							</div>-->
+							<!--                            Chọn hãng xe-->
+							<div class="form-group col-md-6">
+								<label for="brand">Hãng xe <span>*</span></label>
+								<select  id="brand" class="form-control is-invalid" required>
+									<option selected disabled>Chọn hãng</option>
+									<option value="toyota">Toyota</option>
+									<option value="honda">Honda</option>
+									<!--                                    <option value="ford">Ford</option>-->
+									<!--                                    <option value="chevrolet">Chevrolet</option>-->
+									<!--                                    <option value="jeep">Jeep</option>-->
+									<!--                                    <option value="mercedes">Mercedes</option>-->
+								</select>
+							</div>
+
+							<!--                            Chọn dòng xe-->
+							<div class="form-group col-md-6" >
+								<label for="carModel">Dòng xe <span>*</span></label>
+								<select id="carModel" class="form-control is-invalid" required>
+									<option selected disabled value="" >Chọn dòng xe</option>
+								</select>
+							</div>
+							<!--                            Chọn động cơ-->
+							<div class="form-group col-md-6" id="engineInput">
+								<label for="engine">Động cơ <span>*</span></label>
+								<select id="engine" class="form-control is-invalid" required>
+									<option selected disabled value=""  >Chọn động cơ</option>
+								</select>
+							</div>
+							<!--                            Xuất xứ-->
+							<div class="form-group col-md-6" id="originInput">
+								<label for="origin">Xuất xứ<span>*</span></label>
+								<select id="origin" class="form-control is-invalid">
+									<option selected disabled value="" >Chọn xuất xứ</option>
+									<option>Nội địa</option>
+									<option>Nhập khẩu</option>
+								</select>
+							</div>
+							<!--                        Chọn năm-->
+							<div class="form-group col-md-6" id="yearInput">
+								<label for="year">Năm sản xuất<span>*</span></label>
+								<select  id="year" class="form-control is-invalid" >
+									<option selected disabled value="">Chọn năm sản xuất</option>
+								</select>
+							</div>
+
+							<!--                        Chọn hộp số-->
+							<div class="form-group col-md-6" >
+								<label for="gear">Hộp số<span>*</span></label>
+								<select id="gear" class="form-control is-invalid">
+									<option selected disabled value="" >Chọn loại hộp số</option>
+									<option>Số tự động</option>
+									<option>Số sàn</option>
+								</select>
+							</div>
+
+							<!--Chọn nhiên liệu-->
+							<div class="form-group col-md-6">
+								<label for="fuel">Loại nhiên liệu <span>*</span></label>
+								<select  id="fuel" class="form-control is-invalid">
+									<option selected disabled value="" >Chọn loại nhiên liệu</option>
+									<option>Dầu</option>
+									<option>Xăng</option>
+									<option>Điện</option>
+								</select>
+							</div>
+							<!--                            Chọn số chỗ ngồi-->
+							<div class="form-group col-md-6">
+								<label for="numberOfSeat">Số chỗ ngồi <span>*</span></label>
+								<select id="numberOfSeat" class="form-control is-invalid" >
+									<option selected disabled value=""  >Chọn số chỗ ngồi</option>
+									<option>5</option>
+									<option>7</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="pt-4">
+						<h3>Giá và mô tả chi tiết của phương tiện</h3>
+						<div class="form-group pt-4">
+							<label for="price">Giá <span>*</span></label>
+							<input  id="price" type="text" class="form-control is-invalid" value=""
+									placeholder="Nhập giá xe">
+						</div>
+						<div class="form-group">
+							<label for="title">Tiêu đề<span>*</span></label>
+							<input  id="title" type="text" class="form-control is-invalid" value=""
+									placeholder="Ngắn gọn và chính xác">
+						</div>
+						<!--						<div class="form-group">-->
+						<!--							<label for="description">Description <span>*</span></label>-->
+						<!--							<textarea class="form-control is-invalid" id="description"-->
+						<!--									  placeholder="- mô tả chi tiết thông tin của phương tiện" rows="5"-->
+						<!--									  style="resize: none;"></textarea>-->
+						<!--						</div>-->
+
+						<!--						<div class="pt-4">-->
+						<!--							<h3>Thông tin người bán:</h3>-->
+						<!--							<div class="form-row pt-4">-->
+						<!--								<div class="form-group col-md-6" >-->
+						<!--									<label for="fullName">Tên người bán <span>*</span></label>-->
+						<!--									<input id="fullName" type="text" class=" form-control is-invalid"-->
+						<!--										   placeholder="Tên">-->
+						<!--								</div>-->
+
+						<!--								<div class="form-group col-md-6">-->
+						<!--									<label for="phoneNumber">Số điện thoại <span>*</span></label>-->
+						<!--									<input  id="phoneNumber" type="text" class="form-control is-invalid"-->
+						<!--										   placeholder="Số điện thoại">-->
+						<!--								</div>-->
+						<!--							</div>-->
+						<!--						</div>-->
+						<!--						<div class="form-row" id="addressInput">-->
+						<!--							<div class="form-group col-md-6">-->
+						<!--								<label for="city">Thành phố <span>*</span></label>-->
+						<!--								<select id="city" class="form-control is-invalid">-->
+						<!--									<option value="" selected disabled>Tỉnh/Thành Phố</option>-->
+						<!--								</select>-->
+						<!--							</div>-->
+						<!--							<div class="form-group col-md-6">-->
+						<!--								<label for="district">Quận/Huyện <span>*</span></label>-->
+						<!--								<select id="district" class="form-control is-invalid">-->
+						<!--									<option value="" selected disabled>Quận/Huyện</option>-->
+						<!--								</select>-->
+						<!--							</div>-->
+						<!--							<div class="form-group col-md-6">-->
+						<!--								<label for="ward">Phường/Xã <span>*</span></label>-->
+						<!--								<select id="ward" class="form-control is-invalid">-->
+						<!--									<option value="" selected disabled>Phường/Xã</option>-->
+						<!--								</select>-->
+						<!--							</div>-->
+						<!--						</div>-->
+						<!--						<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"-->
+						<!--								referrerpolicy="no-referrer"></script>-->
+						<!--						<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>-->
+						<!--						<h2 id="result"></h2>-->
+						<!--						<script>-->
+						<!--							const host = "https://provinces.open-api.vn/api/";-->
+						<!--							var callAPI = (api) => {-->
+						<!--								return axios.get(api)-->
+						<!--										.then((response) => {-->
+						<!--											renderData(response.data, "city");-->
+						<!--										});-->
+						<!--							}-->
+						<!--							callAPI('https://provinces.open-api.vn/api/?depth=1');-->
+						<!--							var callApiDistrict = (api) => {-->
+						<!--								return axios.get(api)-->
+						<!--										.then((response) => {-->
+						<!--											renderData(response.data.districts, "district");-->
+						<!--										});-->
+						<!--							}-->
+						<!--							var callApiWard = (api) => {-->
+						<!--								return axios.get(api)-->
+						<!--										.then((response) => {-->
+						<!--											renderData(response.data.wards, "ward");-->
+						<!--										});-->
+						<!--							}-->
+
+						<!--							var renderData = (array, select) => {-->
+						<!--								let row = ' <option disable value="">Chọn</option>';-->
+						<!--								array.forEach(element => {-->
+						<!--									row += `<option data-id="${element.code}" value="${element.name}">${element.name}</option>`-->
+						<!--								});-->
+						<!--								document.querySelector("#" + select).innerHTML = row-->
+						<!--							}-->
+
+						<!--							$("#city").change(() => {-->
+						<!--								callApiDistrict(host + "p/" + $("#city").find(':selected').data('id') + "?depth=2");-->
+						<!--								printResult();-->
+						<!--							});-->
+						<!--							$("#district").change(() => {-->
+						<!--								callApiWard(host + "d/" + $("#district").find(':selected').data('id') + "?depth=2");-->
+						<!--								printResult();-->
+						<!--							});-->
+						<!--							$("#ward").change(() => {-->
+						<!--								printResult();-->
+						<!--							})-->
+
+						<!--							var printResult = () => {-->
+						<!--								if ($("#district").find(':selected').data('id') != "" && $("#city").find(':selected').data('id') != "" &&-->
+						<!--										$("#ward").find(':selected').data('id') != "") {-->
+						<!--									let result = $("#city option:selected").text() +-->
+						<!--											" | " + $("#district option:selected").text() + " | " +-->
+						<!--											$("#ward option:selected").text();-->
+						<!--									$("#result").text(result)-->
+						<!--								}-->
+
+						<!--							}-->
+						<!--						</script>-->
+					</div>
+					<div id="submitButton" type="submit" class="btn btn-primary" onclick="createNews()" style="cursor: pointer;">Gửi</div>
+				</form>
+			</section>
+		</div>
+	</main>
+
+	<!--		<script>-->
+	<!--			// Đợi sự kiện khi DOM đã được load-->
+	<!--			document.addEventListener('DOMContentLoaded', function() {-->
+	<!--				// Lấy form-->
+	<!--				var form = document.querySelector('form');-->
+
+	<!--				// Xử lý sự kiện submit của form-->
+	<!--				form.addEventListener('submit', function(event) {-->
+	<!--					event.preventDefault(); // Ngăn chặn hành động mặc định của form-->
+
+	<!--					// Tạo đối tượng XMLHttpRequest-->
+	<!--					var xhttp = new XMLHttpRequest();-->
+
+	<!--					// Lấy dữ liệu từ form-->
+	<!--					var formData = new FormData(form);-->
+
+	<!--					// Thiết lập hành động khi nhận được phản hồi từ server-->
+	<!--					xhttp.onreadystatechange = function() {-->
+	<!--						if (this.readyState === 4 && this.status === 200) {-->
+	<!--							// Xử lý phản hồi từ server (nếu cần)-->
+	<!--							console.log(this.responseText);-->
+	<!--						}-->
+	<!--					};-->
+
+	<!--					// Mở kết nối tới một endpoint trên server (thay thế 'url_endpoint' bằng địa chỉ URL của server)-->
+	<!--					xhttp.open('POST', 'http://localhost:8080/api/specifications/create', true);-->
+
+	<!--					// Gửi dữ liệu từ form đến server-->
+	<!--					xhttp.send(formData);-->
+	<!--				});-->
+	<!--			});-->
+
+	<!--		</script>-->
+	<!-- Footer Area -->
+	<footer id="footer" class="footer-area">
+		<div class="footer__wrapper poss-relative ftr__btm__image section-padding--lg bg--white">
+			<div class="container">
+				<div class="row">
+					<!-- Start Single Widget -->
+					<div class="col-lg-4 col-md-6 col-sm-12">
+						<div class="footer__widget">
+							<div class="ft__logo">
+								<a href="index.html">
+									<h2 style="color: #000000">Winz Fast</h2>
+								</a>
+							</div>
+							<div class="ftr__details">
+								<p>Lorem ipsum dolor sit cnr adipisicing elit, sed do eiusmod teagna aliqua. Lorem
+									ipsudolor sit cnr adi.</p>
+								<p>Lorem ipsum dolor sit cnr adipisicing elit, sed do eiusmod tempo.</p>
+							</div>
+							<div class="ftr__address__inner">
+								<div class="ftr__address">
+									<div class="ftr_icon">
+										<i class="fa fa-home"></i>
+									</div>
+									<div class="ftr__contact">
+										<p>Uttara, Zamzam Tower</p>
+										<p>Road # 12, Sec #13, 5th Floor</p>
+									</div>
+								</div>
+								<div class="ftr__address">
+									<div class="ftr_icon">
+										<i class="fa fa-phone"></i>
+									</div>
+									<div class="ftr__contact">
+										<p><a href="#">+08097-654321</a></p>
+									</div>
+								</div>
+								<div class="ftr__address">
+									<div class="ftr_icon">
+										<i class="fa fa-envelope"></i>
+									</div>
+									<div class="ftr__contact">
+										<p><a href="#">juniorhomeschool.@email.com</a></p>
+										<p><a href="#">Kidscareschool.@yahoo.com</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End Single Widget -->
+					<!-- Start Single Widget -->
+					<div class="col-lg-4 col-md-6 col-sm-12 sm-mt-40">
+						<div class="footer__widget">
+							<h4>Latest Blog</h4>
+							<div class="footer__innner">
+								<div class="ftr__latest__post">
+									<!-- Start Single -->
+									<div class="single__ftr__post">
+										<div class="ftr__post__details">
+											<h6><a href="blog-details.html">Sports Day is near! so lets get ready
+												soon</a></h6>
+											<span><i class="fa fa-calendar"></i>30th Dec, 2017</span>
+										</div>
+									</div>
+									<!-- End Single -->
+									<!-- Start Single -->
+									<div class="single__ftr__post ">
+										<div class="ftr__post__details">
+											<h6><a href="blog-details.html">Sports Day is near! so lets get ready
+												soon</a></h6>
+											<span><i class="fa fa-calendar"></i>30th Dec, 2017</span>
+										</div>
+									</div>
+									<!-- End Single -->
+									<!-- Start Single -->
+									<div class="single__ftr__post ">
+										<div class="ftr__post__details">
+											<h6><a href="blog-details.html">Sports Day is near! so lets get ready
+												soon</a></h6>
+											<span><i class="fa fa-calendar"></i>30th Dec, 2017</span>
+										</div>
+									</div>
+									<!-- End Single -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End Single Widget -->
+					<!-- Start Single Widget -->
+					<div class="col-lg-4 col-md-6 col-sm-12 md-mt-40 sm-mt-40">
+						<div class="footer__widget">
+							<h4>Twitter Widget</h4>
+							<div class="footer__innner">
+								<div class="dcare__twit__wrap">
+									<!-- Start Single -->
+									<div class="dcare__twit d-flex">
+										<div class="dcare__twit__icon">
+											<i class="fa fa-twitter"></i>
+										</div>
+										<div class="dcare__twit__details">
+											<p>Lorem ipsum dolor sit co<a href="#">#
+												twitter.com?web/lnk/statement</a></p>
+											<span><i class="fa fa-clock-o"></i>30th Dec, 2017</span>
+										</div>
+									</div>
+									<!-- End Single -->
+									<!-- Start Single -->
+									<div class="dcare__twit d-flex">
+										<div class="dcare__twit__icon">
+											<i class="fa fa-twitter"></i>
+										</div>
+										<div class="dcare__twit__details">
+											<p>Lorem ipsum dolor sit co<a href="#">#
+												twitter.com?web/lnk/statement</a></p>
+											<span><i class="fa fa-clock-o"></i>30th Dec, 2017</span>
+										</div>
+									</div>
+									<!-- End Single -->
+									<!-- Start Single -->
+									<div class="dcare__twit d-flex">
+										<div class="dcare__twit__icon">
+											<i class="fa fa-twitter"></i>
+										</div>
+										<div class="dcare__twit__details">
+											<p>Lorem ipsum dolor sit co<a href="#">#
+												twitter.com?web/lnk/statement</a></p>
+											<span><i class="fa fa-clock-o"></i>30th Dec, 2017</span>
+										</div>
+									</div>
+									<!-- End Single -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End Single Widget -->
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<div class="container">
+				<div class="row align-items-center copyright__wrapper">
+					<div class="col-lg-6 col-md-6 col-sm-12">
+						<div class="coppy__right__inner">
+							<p>Copyright <i class="fa fa-copyright"></i> Winz Fast </a> All rights reserved. </p>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-12">
+						<div class="ftr__social__icon">
+							<ul
+									class="dacre__social__link d-flex justify-content-center justify-content-md-end justify-content-lg-end">
+								<li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="vimeo"><a href="#"><i class="fa fa-vimeo"></i></a></li>
+								<li class="pinterest"><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- //Footer Area -->
+</div><!-- //Main wrapper -->
+<script type="text/javascript"></script>
+<script src="javascript/option-year.js"></script>
+<script src="javascript/select-brand-carModel-engine.js"></script>
+<script src="javascript/create-news.js"></script>
+<!-- JS Files -->
+<script src="js/vendor/jquery-3.2.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/active.js"></script>
+<!--<script src="js/file-upload.js"></script>-->
+
+
+</body>
+
+</html>
