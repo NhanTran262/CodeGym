@@ -4,7 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f5b91e9-4003-46de-9825-3fe228766822" name="Changes" comment="" />
+    <list default="true" id="9f5b91e9-4003-46de-9825-3fe228766822" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Module02/Case-study-M2/WinZFast/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Module02/Case-study-M2/WinZFast/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module05/Demo/TypeScript/public/Person.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module05/Demo/TypeScript/public/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module05/Demo/TypeScript/public/object.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module05/Demo/TypeScript/src/Person.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module05/Demo/TypeScript/src/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module05/Demo/TypeScript/src/object.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module05/Demo/TypeScript/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module05/Slide 01 - Overview of TypeScript, TypeScript OOP.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module05/Slide 01 - Overview of Web Design, UI-UX, HTML Sematic.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module05/Slide 05 - Commonly Used ES6 Features, Callback, Async-Await.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/71db2183-24d0-4d44-9b8f-2aa46fab0f9c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/71db2183-24d0-4d44-9b8f-2aa46fab0f9c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case-study-m6/best-ticket-front" beforeDir="false" afterPath="$PROJECT_DIR$/case-study-m6/best-ticket-front" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case-study-m6/best-ticket-front/src/component/content/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/case-study-m6/best-ticket-front/src/component/content/Content.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case-study-m6/best-ticket-service" beforeDir="false" afterPath="$PROJECT_DIR$/case-study-m6/best-ticket-service" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case-study-m6/best-ticket-service/src/main/java/com/codegym/bestticket/configuration/AppConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/case-study-m6/best-ticket-service/src/main/java/com/codegym/bestticket/configuration/AppConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case-study-m6/best-ticket-service/src/main/java/com/codegym/bestticket/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/case-study-m6/best-ticket-service/src/main/java/com/codegym/bestticket/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case-study-m6/best-ticket-service/src/main/java/com/codegym/bestticket/controller/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/case-study-m6/best-ticket-service/src/main/java/com/codegym/bestticket/controller/user/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case-study-m6/best-ticket-service/src/main/java/com/codegym/bestticket/converter/user/IRegisterConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/case-study-m6/best-ticket-service/src/main/java/com/codegym/bestticket/converter/user/IRegisterConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case-study-m6/best-ticket-service/src/main/java/com/codegym/bestticket/converter/user/impl/RegisterConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/case-study-m6/best-ticket-service/src/main/java/com/codegym/bestticket/converter/user/impl/RegisterConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case-study-m6/best-ticket-service/src/main/java/com/codegym/bestticket/payload/request/user/LoginGoogleRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/case-study-m6/best-ticket-service/src/main/java/com/codegym/bestticket/service/user/LoginGoogleRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case-study-m6/best-ticket-service/src/main/java/com/codegym/bestticket/payload/request/user/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/case-study-m6/best-ticket-service/src/main/java/com/codegym/bestticket/service/user/LoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case-study-m6/best-ticket-service/src/main/java/com/codegym/bestticket/payload/request/user/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/case-study-m6/best-ticket-service/src/main/java/com/codegym/bestticket/service/user/RegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case-study-m6/best-ticket-service/src/main/java/com/codegym/bestticket/payload/request/user/UnlockUserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/case-study-m6/best-ticket-service/src/main/java/com/codegym/bestticket/service/user/UnlockUserRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case-study-m6/best-ticket-service/src/main/java/com/codegym/bestticket/security/JwtAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/case-study-m6/best-ticket-service/src/main/java/com/codegym/bestticket/security/JwtAuthFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case-study-m6/best-ticket-service/src/main/java/com/codegym/bestticket/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/case-study-m6/best-ticket-service/src/main/java/com/codegym/bestticket/service/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case-study-m6/best-ticket-service/src/main/java/com/codegym/bestticket/service/impl/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/case-study-m6/best-ticket-service/src/main/java/com/codegym/bestticket/service/impl/user/UserService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +59,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nhan Tran/Downloads/ac.txt&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Project-docs/Stock-auto-docs/stock-auto2.sql&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;
   },
   &quot;keyToStringList&quot;: {

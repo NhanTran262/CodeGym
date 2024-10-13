@@ -1,6 +1,4 @@
-var sport: string = 'footbal';
+var sport: string = 'football';
 var id: number = 5;
-var fullname: string= 'nhan';
 console.log(`Sport is ${sport}`);
 console.log(`ID is ${id}`);
-

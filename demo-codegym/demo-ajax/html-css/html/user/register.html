@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="../../css/user/form-register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.0.0/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.0.0/dist/sweetalert2.all.min.js"></script>
+
+</head>
+<style>
+    body {
+        background-image: url('../../image/hcm-black.jpg');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+</style>
+<body>
+<form id="registerForm">
+    <h3>Register</h3>
+    <div class="input">
+        <label for="registerUsername"></label><input type="text" id="registerUsername" name="Username" required = "required">
+        <span>Username</span>
+    </div>
+    <div class="input">
+        <label for="registerPassword"></label><input type="password" id="registerPassword" name="Password" required = "required">
+        <span>Password</span>
+    </div>
+    <div class="input">
+        <label for="registerFirstName"></label><input type="text" id="registerFirstName" name="FirstName" required = "required">
+        <span>Tên</span>
+    </div>
+    <div class="input">
+        <label for="registerLastName"></label><input type="text" id="registerLastName" name="LastName" required = "required">
+        <span>Họ</span>
+    </div>
+    <div class="input">
+        <label for="registerCitizenIdentification"></label><input type="number" id="registerCitizenIdentification" name="CitizenIdentification" required = "required">
+        <span>Căn cước công dân</span>
+    </div>
+    <div class="input">
+        <label for="registerDateRange"></label><input type="date" id="registerDateRange" name="DateRange" required = "required">
+        <span>Ngày cấp</span>
+    </div>
+    <div class="input">
+        <label for="registerEmail"></label><input type="email" id="registerEmail" name="Email" required = "required">
+        <span>Email</span>
+    </div>
+    <div class="input">
+        <label for="registerPhoneNumber"></label><input type="number" id="registerPhoneNumber" name="PhoneNumber" required = "required">
+        <span>Số điện thoại</span>
+    </div>
+    <div class="input">
+        <label for="registerAddress"></label><input type="text" id="registerAddress" name="Address" required = "required">
+        <span>Đại chỉ</span>
+    </div>
+    <div class="input">
+        <button type="submit">Đăng ký</button>
+        <button type="reset">Hủy</button>
+    </div>
+</form>
+
+<div id="errorContainer" style="color: red;"></div>
+<div id="errorMessage" style="color: red; display: none;">Địa chỉ email đã được sử dụng.</div>
+
+
+<script src="../../javascript/user/register.js"></script>
+<script src="../../javascript/user/togglePasswordVisibility.js"></script>
+
+</body>
+</html>
